@@ -21,34 +21,53 @@
     </header>
 
     <section id="inicio" class="hero">
-        <h1>Soluções Contábeis para seu Negócio</h1>
-        <p>Conte com nossa experiência para cuidar da saúde financeira da sua empresa</p>
-        <a href="#contato" class="cta-button">Fale Conosco</a>
-    </section>
-
-    <section id="servicos" class="services">
-        <h2>Nossos Serviços</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-calculator"></i>
-                <h3>Contabilidade</h3>
-                <p>Serviços contábeis completos para empresas de todos os portes</p>
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h1>Soluções Contábeis para seu Negócio</h1>
+                        <p>Conte com nossa experiência para cuidar da saúde financeira da sua empresa</p>
+                    </div>
+                    <img src="./assets/escritorio.jpg" alt="Contabilidade">
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <i class="fas fa-calculator"></i>
+                        <h2>Contabilidade</h2>
+                        <p>Serviços contábeis completos para empresas de todos os portes</p>
+                    </div>
+                    <img src="./assets/contab1.jpg" alt="Serviços Contábeis">
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <i class="fas fa-users"></i>
+                        <h2>Departamento Pessoal</h2>
+                        <p>Gestão completa da folha de pagamento e recursos humanos</p>
+                    </div>
+                    <img src="./assets/dp1.jpg" alt="Departamento Pessoal">
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <h2>Imposto de Renda</h2>
+                        <p>Declaração de IR para pessoas físicas e jurídicas</p>
+                    </div>
+                    <img src="./assets/IR1.jpg" alt="Imposto de Renda">
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <i class="fas fa-chart-line"></i>
+                        <h2>Consultoria Fiscal</h2>
+                        <p>Planejamento tributário e orientação fiscal</p>
+                    </div>
+                    <img src="./assets/consult1.jpg" alt="Consultoria Fiscal">
+                </div>
             </div>
-            <div class="service-card">
-                <i class="fas fa-users"></i>
-                <h3>Departamento Pessoal</h3>
-                <p>Gestão completa da folha de pagamento e recursos humanos</p>
+            <div class="carousel-controls">
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
             </div>
-            <div class="service-card">
-                <i class="fas fa-file-invoice-dollar"></i>
-                <h3>Imposto de Renda</h3>
-                <p>Declaração de IR para pessoas físicas e jurídicas</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Consultoria Fiscal</h3>
-                <p>Planejamento tributário e orientação fiscal</p>
-            </div>
+            <div class="carousel-indicators"></div>
         </div>
     </section>
 
@@ -57,21 +76,12 @@
         <p>Com mais de 15 anos de experiência, oferecemos soluções contábeis personalizadas para empresas de todos os segmentos.</p>
     </section>
 
-    <section id="contato" class="contact">
-        <h2>Entre em Contato</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Nome" required>
-            <input type="email" placeholder="E-mail" required>
-            <input type="tel" placeholder="Telefone">
-            <textarea placeholder="Mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-    <footer>
+    <footer id="footer">
         <div class="footer-content">
             <p>Intempo Assessoria Contábil LTDA</p>
             <p><i class="fas fa-phone"></i> (51) 3224-6687</p>
+            <p><i class="fas fa-envelope"></i> dfiscal@intempo.net.br</p>
+            <p><i class="fas fa-envelope"></i> dpessoal@intempo.net.br</p>
             <p><i class="fas fa-map-marker-alt"></i> Rua General Andrade Neves - Centro, Porto Alegre/RS - CEP: 90010-210</p>
             <p>&copy; 2025 Todos os direitos reservados.</p>
         </div>
