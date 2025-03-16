@@ -14,7 +14,18 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSlide: 0,
         container: document.querySelector('.carousel-container'),
         items: document.querySelectorAll('.carousel-item'),
+        autoPlayInterval: null,
+        preloadImages: function() {
+            const images = Array.from(this.items).map(item => 
+                item.querySelector('img').getAttribute('src')
+            );
+            images.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+        },
         initialize: function() {
+            this.preloadImages();
             const indicators = document.querySelector('.carousel-indicators');
             this.items.forEach((_, index) => {
                 const dot = document.createElement('div');
@@ -28,7 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.prev').addEventListener('click', () => this.prevSlide());
             document.querySelector('.next').addEventListener('click', () => this.nextSlide());
 
-            setInterval(() => this.nextSlide(), 5000); // Auto-advance every 5 seconds
+            this.startAutoPlay();
+        },
+        startAutoPlay: function() {
+            if (this.autoPlayInterval) {
+                clearInterval(this.autoPlayInterval);
+            }
+            this.autoPlayInterval = setInterval(() => this.nextSlide(), 5000);
         },
         updateTransform: function() {
             const offset = -this.currentSlide * 100;
@@ -42,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             indicators[this.currentSlide].classList.add('active');
             this.updateTransform();
+            this.startAutoPlay(); // Reset o timer quando mudar o slide manualmente
         },
         nextSlide: function() {
             this.goToSlide(this.currentSlide + 1);
