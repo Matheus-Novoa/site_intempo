@@ -201,7 +201,7 @@ footer {
 
 .carousel-container {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transição mais suave */
     height: 100%;
 }
 
